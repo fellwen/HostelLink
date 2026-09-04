@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HosteLink — Каталог</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/catalog.css">
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <div class="header-logo">HosteLink</div>
+      <div class="header-slogan">Подбираем для вас лучшие условия</div>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html" class="active">Каталог</a>
+      <a href="admin_login.html">Вход для админа</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="filter-section">
+      <div style="width: 100%;">
+        <div class="filter-title">🔍 Фильтр по категориям</div>
+      </div>
+      <div class="filter-group">
+        <label>Категория номера</label>
+        <select id="filterCat">
+          <option value="">Все категории</option>
+          <option value="Стандарт">Стандарт</option>
+          <option value="Комфорт">Комфорт</option>
+          <option value="Люкс">Люкс</option>
+          <option value="Семейный">Семейный</option>
+          <option value="Делюкс">Делюкс</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Макс. цена за ночь</label>
+        <input type="number" id="filterPrice" placeholder="например 10000" min="0">
+      </div>
+      <div class="btn-group" style="display:flex; gap:10px;">
+        <button class="btn btn-primary" onclick="applyFilter()">Применить</button>
+        <button class="btn btn-reset" onclick="resetFilter()">Сбросить фильтр</button>
+      </div>
+    </div>
+
+    <h2 class="cards-section-title">
+      Доступные номера <span class="cards-count" id="count"></span>
+    </h2>
+    <br>
+    <div class="cards-grid" id="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">HosteLink</div>
+        <div class="footer-brand-sub">© 2026 Все права защищены</div>
+      </div>
+      <div class="footer-contacts">
+        <div class="footer-contacts-title">Контакты</div>
+        <div class="footer-contact-item">📍 г. Нижний Новгород, ул. Большая Покровская, д. 32</div>
+        <div class="footer-contact-item">🕐 Пн–Вс: 08:00 — 22:00</div>
+        <div class="footer-contact-item">📞 +7 (831) 123-45-67</div>
+        <div class="footer-contact-item">✉️ info@hostelink.ru</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script/catalog.js">
+
+  </script>
+
+</body>
+</html>

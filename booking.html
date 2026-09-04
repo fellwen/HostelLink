@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/booking.css">
+  <title>HosteLink — Бронирование</title>
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html">← Назад в каталог</a>
+  </header>
+
+  <div class="container">
+    <div class="room-info">
+      <h2 id="roomName">Загрузка...</h2>
+      <p>Цена: <span id="roomPrice">0</span> ₽/ночь</p>
+    </div>
+
+    <div class="form-card">
+      <h3>Оформление заявки</h3>
+      <br>
+      <form id="bookingForm" novalidate>
+        <div class="form-group">
+          <label>Имя *</label>
+          <input type="text" id="fname" placeholder="Иван">
+          <div class="error-text" id="err-fname"></div>
+        </div>
+        <div class="form-group">
+          <label>Фамилия *</label>
+          <input type="text" id="lname" placeholder="Иванов">
+          <div class="error-text" id="err-lname"></div>
+        </div>
+        <div class="form-group">
+          <label>Телефон *</label>
+          <input type="text" id="phone" placeholder="+7(999)123-45-67">
+          <div class="error-text" id="err-phone"></div>
+        </div>
+        <div class="form-group">
+          <label>E-mail *</label>
+          <input type="text" id="email" placeholder="mail@example.com">
+          <div class="error-text" id="err-email"></div>
+        </div>
+        <div class="form-group">
+          <label>Дата заезда *</label>
+          <input type="date" id="dateIn">
+          <div class="error-text" id="err-dateIn"></div>
+        </div>
+        <div class="form-group">
+          <label>Дата выезда *</label>
+          <input type="date" id="dateOut">
+          <div class="error-text" id="err-dateOut"></div>
+        </div>
+        <button type="submit" class="btn-submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">© 2026 HosteLink</footer>
+
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <div class="modal-icon">✅</div>
+      <h2>Заявка отправлена!</h2>
+      <p>Мы свяжемся с вами для подтверждения.</p>
+      <br>
+      <button onclick="window.location.href='index.html'" class="btn-submit">ОК</button>
+    </div>
+  </div>
+
+<script src="assets/script/booking.js"></script>
+</body>
+</html>
